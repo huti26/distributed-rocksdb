@@ -1,4 +1,4 @@
-#
+# Distributed RocksDB
 
 Documentation for project folders in `/docs`
 
