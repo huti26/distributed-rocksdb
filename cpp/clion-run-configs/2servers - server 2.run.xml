@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="2servers - server 2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-s server2 -p 13338 -c /tmp/cpp/src/distributed-rocksdb/Server/server_config2.txt -r 2" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="master_thesis_docker" TARGET_NAME="distributed-rocksdb-server-cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="master_thesis_docker" RUN_TARGET_NAME="distributed-rocksdb-server-cpp">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

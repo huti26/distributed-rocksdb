@@ -1,0 +1,26 @@
+Intialising Properties
+Connecting to Drdb server at 10.112.51.173:13337 with log_dir /media/ssd/drdb/logs/2Set nativePtr to 23022501154880
+[OVERALL], RunTime(ms), 51681
+[OVERALL], Throughput(ops/sec), 483.736769799346
+[TOTAL_GCS_G1_Young_Generation], Count, 3
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 41
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.07933283024709274
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 3
+[TOTAL_GC_TIME], Time(ms), 41
+[TOTAL_GC_TIME_%], Time(%), 0.07933283024709274
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 1.0
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 1
+[CLEANUP], 95thPercentileLatency(us), 1
+[CLEANUP], 99thPercentileLatency(us), 1
+[INSERT], Operations, 25000
+[INSERT], AverageLatency(us), 2063.10424
+[INSERT], MinLatency(us), 238
+[INSERT], MaxLatency(us), 153471
+[INSERT], 95thPercentileLatency(us), 14375
+[INSERT], 99thPercentileLatency(us), 26079
+[INSERT], Return=OK, 25000

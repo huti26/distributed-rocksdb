@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+      - "releases/002"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build -f ./dockerfiles/debian_base.dockerfile -t hutii/drdb:base . && docker build -f ./dockerfiles/drdb_release.dockerfile -t hutii/drdb:release . && docker push hutii/drdb:release

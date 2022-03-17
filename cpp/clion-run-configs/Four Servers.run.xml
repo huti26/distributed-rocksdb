@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Four Servers" type="CompoundRunConfigurationType">
+    <toRun name="4servers - server 1" type="CMakeRunConfiguration" />
+    <toRun name="4servers - server 2" type="CMakeRunConfiguration" />
+    <toRun name="4servers - server 3" type="CMakeRunConfiguration" />
+    <toRun name="4servers - server 4" type="CMakeRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>

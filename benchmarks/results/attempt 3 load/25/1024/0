@@ -1,0 +1,67 @@
+Intialising Properties
+Connecting to Drdb server at 10.112.51.170:13339 with log_dir /media/ssd/drdb/logs/0Intialising Properties
+Connecting to Drdb server at 10.112.51.170:13339 with log_dir /media/ssd/drdb/logs/0Set nativePtr to 23340932714624
+[OVERALL], RunTime(ms), 241202
+[OVERALL], Throughput(ops/sec), 11.268563278911452
+[TOTAL_GCS_G1_Young_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 1.0
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 1
+[CLEANUP], 95thPercentileLatency(us), 1
+[CLEANUP], 99thPercentileLatency(us), 1
+[INSERT], Operations, 2718
+[INSERT], AverageLatency(us), 88100.95584988962
+[INSERT], MinLatency(us), 45
+[INSERT], MaxLatency(us), 440063
+[INSERT], 95thPercentileLatency(us), 171007
+[INSERT], 99thPercentileLatency(us), 284927
+[INSERT], Return=OK, 2718
+[INSERT], Return=ERROR, 1
+[INSERT-FAILED], Operations, 1
+[INSERT-FAILED], AverageLatency(us), 149056.0
+[INSERT-FAILED], MinLatency(us), 148992
+[INSERT-FAILED], MaxLatency(us), 149119
+[INSERT-FAILED], 95thPercentileLatency(us), 149119
+[INSERT-FAILED], 99thPercentileLatency(us), 149119
+Intialising Properties
+Connecting to Drdb server at 10.112.51.170:13339 with log_dir /media/ssd/drdb/logs/0Set nativePtr to 22355707482176
+[OVERALL], RunTime(ms), 173834
+[OVERALL], Throughput(ops/sec), 11.068030419825812
+[TOTAL_GCS_G1_Young_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 1.0
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 1
+[CLEANUP], 95thPercentileLatency(us), 1
+[CLEANUP], 99thPercentileLatency(us), 1
+[INSERT], Operations, 1924
+[INSERT], AverageLatency(us), 90124.00103950105
+[INSERT], MinLatency(us), 51
+[INSERT], MaxLatency(us), 594431
+[INSERT], 95thPercentileLatency(us), 182015
+[INSERT], 99thPercentileLatency(us), 291071
+[INSERT], Return=OK, 1924
+[INSERT], Return=ERROR, 1
+[INSERT-FAILED], Operations, 1
+[INSERT-FAILED], AverageLatency(us), 79392.0
+[INSERT-FAILED], MinLatency(us), 79360
+[INSERT-FAILED], MaxLatency(us), 79423
+[INSERT-FAILED], 95thPercentileLatency(us), 79423
+[INSERT-FAILED], 99thPercentileLatency(us), 79423

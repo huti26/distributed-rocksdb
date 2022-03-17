@@ -1,0 +1,33 @@
+Intialising Properties
+Connecting to Drdb server at 10.112.51.168:13337 with log_dir /media/ssd/drdb/logs/6Set nativePtr to 23325296350480
+[OVERALL], RunTime(ms), 1682171
+[OVERALL], Throughput(ops/sec), 59.44698844528886
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 47
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.0027940084569285763
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 47
+[TOTAL_GC_TIME_%], Time(%), 0.0027940084569285763
+[READ], Operations, 49697
+[READ], AverageLatency(us), 15685.903072620078
+[READ], MinLatency(us), 19
+[READ], MaxLatency(us), 482047
+[READ], 95thPercentileLatency(us), 75903
+[READ], 99thPercentileLatency(us), 148735
+[READ], Return=OK, 49697
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 3.0
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 3
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 3
+[UPDATE], Operations, 50303
+[UPDATE], AverageLatency(us), 17919.67172932032
+[UPDATE], MinLatency(us), 36
+[UPDATE], MaxLatency(us), 476927
+[UPDATE], 95thPercentileLatency(us), 79039
+[UPDATE], 99thPercentileLatency(us), 155007
+[UPDATE], Return=OK, 50303

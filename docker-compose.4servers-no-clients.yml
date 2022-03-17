@@ -1,0 +1,32 @@
+services:
+  server1:
+    build:
+      context: .
+      dockerfile: dockerfiles/drdb.dockerfile
+    image: "hutii/drdb:latest"
+    entrypoint: "/app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp -s server1 -p 13337 -c /app/src/distributed-rocksdb/Server/server_config4.txt"
+    network_mode: host
+
+  server2:
+    build:
+      context: .
+      dockerfile: dockerfiles/drdb.dockerfile
+    image: "hutii/drdb:latest"
+    entrypoint: "/app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp -s server2 -p 13338 -c /app/src/distributed-rocksdb/Server/server_config4.txt"
+    network_mode: host
+
+  server3:
+    build:
+      context: .
+      dockerfile: dockerfiles/drdb.dockerfile
+    image: "hutii/drdb:latest"
+    entrypoint: "/app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp -s server3 -p 13339 -c /app/src/distributed-rocksdb/Server/server_config4.txt"
+    network_mode: host
+
+  server4:
+    build:
+      context: .
+      dockerfile: dockerfiles/drdb.dockerfile
+    image: "hutii/drdb:latest"
+    entrypoint: "/app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp -s server4 -p 13340 -c /app/src/distributed-rocksdb/Server/server_config4.txt"
+    network_mode: host

@@ -1,0 +1,112 @@
+==24== HEAP SUMMARY:
+==24==     in use at exit: 2,985,232 bytes in 2,040 blocks
+==24==   total heap usage: 10,428 allocs, 8,388 frees, 4,899,612 bytes allocated
+==24==
+==24== Thread 1:
+==24== 8 bytes in 1 blocks are definitely lost in loss record 25 of 976
+==24==    at 0x484AB64: operator new[](unsigned long) (vg_replace_malloc.c:431)
+==24==    by 0x4BB424F: rocksdb::VersionStorageInfo::VersionStorageInfo(rocksdb::InternalKeyComparator const*, rocksdb::Comparator const*, int, rocksdb::CompactionStyle, rocksdb::VersionStorageInfo*, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4BB47AB: rocksdb::Version::Version(rocksdb::ColumnFamilyData*, rocksdb::VersionSet*, rocksdb::FileOptions const&, rocksdb::MutableCFOptions, unsigned long) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4BB4977: rocksdb::VersionSet::CreateColumnFamily(rocksdb::ColumnFamilyOptions const&, rocksdb::VersionEdit const*) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4BBA9F3: rocksdb::VersionSet::Recover(std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B15A43: rocksdb::DBImpl::Recover(std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, bool, bool, bool, unsigned long*) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B109FF: rocksdb::DBImpl::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**, bool, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1219F: rocksdb::DB::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1233B: rocksdb::DB::Open(rocksdb::Options const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x11D4FB: DrdbServerApp::init_rocksdb() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x11C723: DrdbServerApp::start() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x10F057: main (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==
+==24== 352 bytes in 1 blocks are possibly lost in loss record 847 of 976
+==24==    at 0x484C164: calloc (vg_replace_malloc.c:760)
+==24==    by 0x401155B: allocate_dtv (dl-tls.c:343)
+==24==    by 0x401155B: _dl_allocate_tls (dl-tls.c:589)
+==24==    by 0x486F027: allocate_stack (allocatestack.c:622)
+==24==    by 0x486F027: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+==24==    by 0x5078F93: std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+==24==    by 0x4CE7B77: rocksdb::ThreadPoolImpl::Impl::StartBGThreads() (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4CE7FBB: rocksdb::ThreadPoolImpl::Impl::SetBackgroundThreadsInternal(int, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B0EA93: rocksdb::SanitizeOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rocksdb::DBOptions const&) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4AD8BCB: rocksdb::DBImpl::DBImpl(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B107A3: rocksdb::DBImpl::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**, bool, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1219F: rocksdb::DB::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1233B: rocksdb::DB::Open(rocksdb::Options const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x11D4FB: DrdbServerApp::init_rocksdb() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==
+==24== 352 bytes in 1 blocks are possibly lost in loss record 848 of 976
+==24==    at 0x484C164: calloc (vg_replace_malloc.c:760)
+==24==    by 0x401155B: allocate_dtv (dl-tls.c:343)
+==24==    by 0x401155B: _dl_allocate_tls (dl-tls.c:589)
+==24==    by 0x486F027: allocate_stack (allocatestack.c:622)
+==24==    by 0x486F027: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+==24==    by 0x5078F93: std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+==24==    by 0x4CE7B77: rocksdb::ThreadPoolImpl::Impl::StartBGThreads() (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4CE7FBB: rocksdb::ThreadPoolImpl::Impl::SetBackgroundThreadsInternal(int, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B0EAAB: rocksdb::SanitizeOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rocksdb::DBOptions const&) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4AD8BCB: rocksdb::DBImpl::DBImpl(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B107A3: rocksdb::DBImpl::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**, bool, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1219F: rocksdb::DB::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1233B: rocksdb::DB::Open(rocksdb::Options const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x11D4FB: DrdbServerApp::init_rocksdb() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==
+==24== 352 bytes in 1 blocks are possibly lost in loss record 849 of 976
+==24==    at 0x484C164: calloc (vg_replace_malloc.c:760)
+==24==    by 0x401155B: allocate_dtv (dl-tls.c:343)
+==24==    by 0x401155B: _dl_allocate_tls (dl-tls.c:589)
+==24==    by 0x486F027: allocate_stack (allocatestack.c:622)
+==24==    by 0x486F027: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+==24==    by 0x4F696D3: ucs_async_thread_start (thread.c:206)
+==24==    by 0x4F69E3F: ucs_async_thread_add_event_fd (thread.c:322)
+==24==    by 0x4F676E7: ucs_async_set_event_handler (async.c:501)
+==24==    by 0x55A9137: uct_tcp_iface_listener_init (tcp_iface.c:485)
+==24==    by 0x55A9137: uct_tcp_iface_t_init (tcp_iface.c:708)
+==24==    by 0x55A963B: uct_tcp_iface_t_new (tcp_iface.c:794)
+==24==    by 0x559A887: uct_iface_open (uct_md.c:267)
+==24==    by 0x4EE9293: ucp_worker_iface_open (ucp_worker.c:1134)
+==24==    by 0x4EE9E13: ucp_worker_add_resource_ifaces (ucp_worker.c:950)
+==24==    by 0x4EEBAF3: ucp_worker_create (ucp_worker.c:2086)
+==24==
+==24== 1,408 bytes in 4 blocks are possibly lost in loss record 926 of 976
+==24==    at 0x484C164: calloc (vg_replace_malloc.c:760)
+==24==    by 0x401155B: allocate_dtv (dl-tls.c:343)
+==24==    by 0x401155B: _dl_allocate_tls (dl-tls.c:589)
+==24==    by 0x486F027: allocate_stack (allocatestack.c:622)
+==24==    by 0x486F027: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+==24==    by 0x5078F93: std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+==24==    by 0x4B8EC3B: rocksdb::VersionBuilder::Rep::LoadTableHandlers(rocksdb::InternalStats*, int, bool, bool, rocksdb::SliceTransform const*, unsigned long) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B878DB: rocksdb::VersionBuilder::LoadTableHandlers(rocksdb::InternalStats*, int, bool, bool, rocksdb::SliceTransform const*, unsigned long) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4BBADAB: rocksdb::VersionSet::Recover(std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B15A43: rocksdb::DBImpl::Recover(std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, bool, bool, bool, unsigned long*) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B109FF: rocksdb::DBImpl::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**, bool, bool) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1219F: rocksdb::DB::Open(rocksdb::DBOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<rocksdb::ColumnFamilyDescriptor, std::allocator<rocksdb::ColumnFamilyDescriptor> > const&, std::vector<rocksdb::ColumnFamilyHandle*, std::allocator<rocksdb::ColumnFamilyHandle*> >*, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x4B1233B: rocksdb::DB::Open(rocksdb::Options const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rocksdb::DB**) (in /usr/lib/librocksdb.so.6.11.4)
+==24==    by 0x11D4FB: DrdbServerApp::init_rocksdb() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==
+==24== 41,048 bytes in 1 blocks are possibly lost in loss record 969 of 976
+==24==    at 0x4849E4C: malloc (vg_replace_malloc.c:307)
+==24==    by 0x4F71BB3: ucs_mpool_hugetlb_malloc (mpool.c:318)
+==24==    by 0x4F71703: ucs_mpool_grow (mpool.c:190)
+==24==    by 0x4F719DB: ucs_mpool_get_grow (mpool.c:238)
+==24==    by 0x4F275FB: ucs_mpool_get_inline (mpool.inl:23)
+==24==    by 0x4F275FB: ucp_stream_recv_nbx (stream_recv.c:351)
+==24==    by 0x11061F: DrdbWorker::receive_method() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x11A3E7: int std::__invoke_impl<int, int (DrdbWorker::*)(), DrdbWorker*>(std::__invoke_memfun_deref, int (DrdbWorker::*&&)(), DrdbWorker*&&) (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x11A303: std::__invoke_result<int (DrdbWorker::*)(), DrdbWorker*>::type std::__invoke<int (DrdbWorker::*)(), DrdbWorker*>(int (DrdbWorker::*&&)(), DrdbWorker*&&) (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x11A26B: int std::thread::_Invoker<std::tuple<int (DrdbWorker::*)(), DrdbWorker*> >::_M_invoke<0ul, 1ul>(std::_Index_tuple<0ul, 1ul>) (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x11A227: std::thread::_Invoker<std::tuple<int (DrdbWorker::*)(), DrdbWorker*> >::operator()() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x11A207: std::thread::_State_impl<std::thread::_Invoker<std::tuple<int (DrdbWorker::*)(), DrdbWorker*> > >::_M_run() (in /app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp)
+==24==    by 0x5078CAB: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+==24==
+==24== LEAK SUMMARY:
+==24==    definitely lost: 8 bytes in 1 blocks
+==24==    indirectly lost: 0 bytes in 0 blocks
+==24==      possibly lost: 43,512 bytes in 8 blocks
+==24==    still reachable: 2,941,712 bytes in 2,031 blocks
+==24==                       of which reachable via heuristic:
+==24==                         newarray           : 1,208 bytes in 2 blocks
+==24==         suppressed: 0 bytes in 0 blocks
+==24== Reachable blocks (those to which a pointer was found) are not shown.
+==24== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==24==
+==24== For lists of detected and suppressed errors, rerun with: -s
+==24== ERROR SUMMARY: 3009 errors from 12 contexts (suppressed: 0 from 0)

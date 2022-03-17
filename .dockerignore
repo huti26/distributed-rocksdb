@@ -1,0 +1,14 @@
+cpp/.idea
+cpp/clion-run-configs
+cpp/cmake-build-debug
+cpp/notes.md
+cpp/readme.md
+cpp/todo.md
+
+java/.gradle
+java/.idea
+java/build
+java/gradle
+java/gradlew
+java/gradlew.bat
+java/README.md

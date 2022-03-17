@@ -1,0 +1,8 @@
+Bootstrap: docker
+From: hutii/drdb:latest
+
+%labels
+    Version v0.0.1
+
+%help
+    Wrapper for docker image of distributed rocksdb
