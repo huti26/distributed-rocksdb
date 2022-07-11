@@ -2,17 +2,19 @@ services:
   server1:
     build:
       context: .
-      dockerfile: dockerfiles/drdb.dockerfile
+      dockerfile: dockerfiles/drdb_debug.dockerfile
     image: "hutii/drdb:latest"
     entrypoint: "/app/build/src/distributed-rocksdb/Server/distributed-rocksdb-server-cpp -s server1 -p 13337 -c /app/src/distributed-rocksdb/Server/server_config1.txt"
     network_mode: host
+    shm_size: "2gb"
 
   client1:
     build:
       context: .
-      dockerfile: dockerfiles/drdb.dockerfile
+      dockerfile: dockerfiles/drdb_debug.dockerfile
     image: "hutii/drdb:latest"
     entrypoint: /bin/bash -c "source /root/.bashrc && cd /java-app && gradle run"
     depends_on:
       - server1
     network_mode: host
+    shm_size: "2gb"
